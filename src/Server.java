@@ -20,8 +20,8 @@ public class Server {
                 Thread thread = new Thread(clientHandler);
                 thread.start();
             }
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
+        } catch (IOException e) {
+            closeServer();
         }
     }
 
